@@ -41,8 +41,20 @@
 
     <div class='container'>
         <div class="card card-panel" style="margin-top:15px; background-color:rgba(0, 0, 0, 0.6)">
-            <h3 style="text-align:center;color:rgba(255,255,255,0.87); ">Login</h3>
-            <form action='#' method='post' class='col s12'>
+            <h3 style="text-align:center;color:rgba(255,255,255,0.87); ">Sign Up</h3>
+            <form id='regform' action='#' method='post' class='col s12'>
+                <div class='row'>
+                    <div class='input-field col s8 offset-s2 small-margin'>
+                        <input id='firstname' type='text' class='validate'>
+                        <label for='firstname'>First name</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='input-field col s8 offset-s2 small-margin'>
+                        <input id='secondname' type='text' class='validate'>
+                        <label for='secondname'>Second name</label>
+                    </div>
+                </div>
                 <div class='row'>
                     <div class='input-field col s8 offset-s2 small-margin'>
                         <input id='email' type='email' class='validate'>
@@ -51,15 +63,18 @@
                 </div>
                 <div class='row'>
                     <div class='input-field col s8 offset-s2 small-margin'>
-                        <input id='pass' type='password'>
-                        <label for='pass'>Password</label>
+                        <input id='pass' type='password' class='validate'>
+                        <label for='pass' data-error='Password does not meet requirements'>Password</label>
                     </div>
                 </div>
                 <div class='row'>
-                    <button type='submit' name='action' value='login' class="col s8 offset-s2 btn waves-effect waves-light blue darken-2" >Log In</button>
+                    <div class='input-field col s8 offset-s2 small-margin'>
+                        <input id='passconfirm' type='password' class='validate'>
+                        <label for='passconfirm' data-error='Passwords do not match'>Confirm password</label>
+                    </div>
                 </div>
                 <div class='row'>
-                    <a class="col s8 offset-s2 btn waves-effect waves-light green" href='reg.html'>Sign Up</a>
+                    <button id='submit-reg-form' type='submit' name='action' value='signup' class="col s8 offset-s2 btn waves-effect waves-light green valid" >Register</button>
                 </div>
             </form>
         </div>
